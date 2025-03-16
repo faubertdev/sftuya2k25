@@ -1,0 +1,29 @@
+<div class="row align-items-center">
+	<div class="col-auto">
+        {% if link_back is defined and link_back is not empty %}
+    		<a href="{{link_back}}" title="{{'breadcrumb.back'|trans}}">
+    			<i class="mdi mdi-chevron-left mdi-36px text-dark"></i>
+    		</a>
+        {% endif %}
+	</div>
+    <div class="col-auto">
+        <h4 class="page-title">{% block page_title %}{% endblock %}</h4>
+    </div>
+    <div class="col">
+        {% block page_title_next %}{% endblock %}
+    </div>
+    <div class="col-auto">
+        <ol class="breadcrumb m-0">
+            {% if breadcrumbs is defined %}
+                <li class="breadcrumb-item">
+                    <a href="{{path('app_home')}}">{{ "Dashboard.title" | trans }}</a>
+                </li>
+        		{% for b in breadcrumbs %}
+        			<li class="breadcrumb-item">
+        				<a href="{{path(b[0], b[2])}}">{{b[1]|trans}}</a>
+        			</li>
+        		{% endfor %}
+            {% endif %}
+        </ol>
+    </div>
+</div>

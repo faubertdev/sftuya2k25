@@ -1,0 +1,98 @@
+<div class="row">
+	<div class="col-sm-12">
+		<div class="card bg-primary">
+			<div class="card-body">
+				<div class="row">
+					<div class="col-sm-8">
+						<div class="row align-items-center mb-0">
+{#							{{ dump(user.group) }}#}
+							<div class="col">
+								<h2 class="mt-0 mb-1 text-white">{{ user.firstName }}
+									{{ user.lastName }}
+									{% if (app.user == user and is_granted('user_self_creer_w', app.user)) or (app.user != user and is_granted('user_user_creer_w', app.user)) %}
+										<a href="#" data-bs-target="#update-user-infos" data-bs-toggle="modal">
+											<i class="mdi mdi-24px mdi-pencil text-white"></i>
+										</a>
+									{% else %}
+										<i class="mdi mdi-24px mdi-pencil text-white" title="{{not_allowed_title}}" style="{{not_allowed_style}}"></i>
+									{% endif %}
+								</h2>
+
+								<ul class="mb-0 list-inline text-light">
+									<li class="list-inline-item me-3">
+										<h5 class="mb-1 text-white">
+											{{ "profil.identifiant" | trans }}
+											:
+											{{user.username}}
+										</h5>
+										<p class="mb-0 font-13 text-white">{{ "profil.email" | trans }} :
+											{{user.email}}
+										</p>
+										<p class="mb-0 font-13 text-white">{{ "profil.phone"| trans }} :
+											{{ user.phone }}
+										</p>
+										<p class="mb-0 font-13 text-white">{{ "profile.role"|trans }}
+											{% for role in user.roles %}
+												{{ role }}
+											{% endfor %}
+										</p>
+										<p class="mb-0 font-13 text-white">{{ "profil.group" | trans }} :
+											{% for group in user.group %}
+												{{group.group}}
+												{{ not loop.last ? ', ' }}
+											{% endfor %}
+										</p>
+									</li>
+									<li class="list-inline-item"></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-4">
+						<div class="text-center mt-sm-0 mt-3 text-sm-end">
+							{% if user.getStatut == 1 %}
+								<h4>
+									<span class="badge bg-success position-absolute bottom-0 end-0 translate-middle ">{{ 'Actif' }}</span>
+								</h4>
+							{% endif %}
+
+							{% if user.getStatut == 0 %}
+								<h4>
+									<span class="badge bg-danger position-absolute bottom-0 end-0 translate-middle">{{ 'Désactivé' }}</span>
+								</h4>
+							{% endif %}
+
+							{% if user.getStatut == 2 %}
+								<h4>
+									<span class="badge bg-warning position-absolute bottom-0 end-0 translate-middle">{{ 'En attente' }}</span>
+								</h4>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<ul class="nav nav-tabs mb-3">
+	<li class="nav-item">
+		{% set active = '' %}
+		{% if app.request.get('_route') == 'app_user_show_user' %}
+			{% set active = 'active disabled dt' %}
+		{% endif %}
+		<a href="{{path('app_user_show_user', {'id': user.id})}}" class="nav-link {{active}}">
+			<span class="d-md-block">{{'home.user.card'|trans}}</span>
+		</a>
+	</li>
+	<li class="nav-item">
+		{% set active = '' %}
+		{% if app.request.get('_route') == 'app_user_permissions' %}
+			{% set active = 'active disabled dt' %}
+		{% endif %}
+{#		<a href="{{path('app_user_permissions', {'id': user.id})}}" class="nav-link {{active}}">#}
+{#			<span class="d-md-block">{{'group.title_tab'|trans}}</span>#}
+{#		</a>#}
+	</li>
+</ul>

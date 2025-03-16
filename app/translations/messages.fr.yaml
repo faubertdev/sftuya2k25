@@ -1,0 +1,208 @@
+home:
+  event:
+    list: Liste des évenements
+  user:
+    id: Identifiant
+    admin: Administrateur
+    username: Nom d'utilisateur
+    login: Login
+    firstName: Prénom
+    lastName: Nom
+    birthdate: Date de naissance
+    active_users: Utilisateurs actifs
+    submit: Sauvegarder
+    update: Mettre à jour
+    list: Liste des utilisateurs
+    card: Fiche utilisateur
+    email: Email
+    roles: Rôles
+    created_at: Création
+    status: Statut
+    action: Action
+    my_account: Mon compte
+    logout: Déconnexion
+    actions:
+      creation: Créer utilisateur
+      delete: Supprimer
+      edit: Modifier l'utilisateur
+      deactivate: Utilisateur désactivé avec succée
+      activated: Utilisateur activé avec succès
+  page:
+    list: Liste des pages
+  post:
+    list: Liste des articles
+  toast:
+    user_created: Utilisateur créé !
+    user_updated: Utilisateur mis à jour !
+    user_update_api_error: Erreur lors du changement de la clé API
+    user_deleted: Utilisateur supprimé !
+    user_not_found: No user found !
+  modal:
+    title: Confirmation de suppression
+    message: Voulez vous supprimer cet utilisateur ?
+    buttons:
+      close: Fermer
+      delete: Supprimer
+login:
+  form:
+    header: Connectez-vous
+    message: Entrez votre login et votre mot de passe.
+    logout: Déconnectez-vous
+    forgot_password: Mot de passe oublié
+    password_label: Mot de passe
+    login_label: Email
+    login_button: Se connecter
+    logged_as: Connecté en tant que
+    send: Envoyer
+  first:
+    header: Première connection
+    message: Merci de créer votre mot de passe afin de finaliser votre inscription.
+    error1: Le mot de passe est trop court ou peu complexe.
+side-navbar:
+  events: Evenements
+  posts: Articles
+  pages: Pages
+  zones: Emplacements
+  groups: Groupes
+  home: Accueil
+  users: Utilisateurs
+  clients: Clients
+  thirdparties: Clients
+  categories: Catégories
+  thirdparties_categorie: Categorie de clients
+  products: Produits
+  bills: Factures
+  registries: Référentiels
+Dashboard:
+  title: Accueil
+list:
+  events:
+    create_button: créer un évenement
+  posts:
+    create_button: Créer un article
+  pages:
+    create_button: Créer une page
+  users:
+    create_button: Créer un utilisateur
+  thirdparties:
+    create_button: Créer un client
+profil:
+  categories: Catégorie(s)
+  title: Fiche utilisateur
+  card: Fiche de l'utilisateur
+  identifiant: Identifiant
+  group: Groupe
+  contact_details: Adresse
+  address: Adresse
+  zip: Code postal
+  town: Ville
+  email: Email
+  country: Pays
+  reference: Référence
+  api_key: Clé API
+  technic_info: Information technique
+  activity: Activité
+  user_create: Date de création de l'utilisateur
+  user_last_connection: Dernière connexion
+  user_previous_login: Connexion précédente
+  phone: Téléphone
+  toast:
+    password_invalid: Mot de passe incorrect
+  thirdParties:
+    code: Code client
+    create: Date de création du client
+    infos: Informations client
+  statut:
+    statut: Status
+    actif: Actif
+client:
+  name: Nom
+  alias: Alias
+  email: Email
+  address: Adresse
+  zip: Code postal
+  town: ville
+  phone: Téléphone
+  fax: Fax
+  created_at: date de création
+  infos:
+    status: Status
+    reference: Référence client
+    departement: département
+    commercial: commercial affecté
+
+modal:
+  user:
+    delete:
+      title: Suppression de l'utilisateur
+      content: Voulez-vous vraiment supprimer cet utilisateur ?
+    update_password:
+      title: Mettre à jour le mot de passe
+    deactivate:
+      title: Confirmation de désactivation
+      message: Voulez vous désactiver cet utilisateur ?
+      button_confirm: Désactiver
+    activate:
+      title: Confirmation de l'activation
+      message: Voulez vous activer cet utilisateur ?
+      button_confirm: Activer
+    update_api_key:
+      title: Mettre à jour l'API key
+    update_user_details:
+      title: Mise à jour des coordonnées
+    update_user_infos:
+      title: Mise à jour des informations
+  thirdparties:
+    title: Informations client
+    address:
+      submit: Modifier
+    update:
+      address: Modification de l'adresse
+      client: Modification des informations du client
+
+reset_password:
+  title: Réinitialiser le mot de passe
+  send_mail: Envoyer l'email de réinitialisation
+  description: Entrez votre adresse e-mail et nous vous enverrons un e-mail avec des instructions pour réinitialiser votre mot de passe.
+  request_description: Entrez votre nouveau mot de passe
+  reset_button: Réinitialiser le mot de passe
+  login_button: Se connecter
+  send_mail_button: Envoyer mail
+  toast:
+    success: Email envoyé avec succès
+    fail: Cette addresse email n'existe pas.
+    password_changed: Mot de passe changé avec succès
+    password_changed_error: Erreur lors du changement du Mot de passe
+    invalid_token: Jeton invalide
+    token_expired: Jeton expiré
+    token_still_valid: Votre jeton est encore valide
+    weak_password: Le mot de passe est faible
+    passwords_dont_match: Les valeurs ne correspondent pas.
+
+group:
+  title_tab: Groupes et Permissions
+  title_btn: Groupes
+  title_page: Liste des groupes
+  name: Nom
+  desc: Description
+  users: Utilisateurs
+  perms: Permissions
+  action: Action
+  attention: Attention
+  error_user: Aucun utilisateur affecté à ce groupe
+  error_perm: Aucune permission affectée à ce groupe
+  new: Nouveau groupe
+  create: Créer un groupe
+  edit: Editer le groupe
+  group: Groupe
+  affected: Ce groupe est affecté à %total% utilisateur%plurial%
+  linked_perms: Permissions liées au groupe
+  all: Tout
+  nothing: Aucun
+  save_btn: Sauvegarder les modifications
+  save_success: Le groupe et ses permissions ont bien été sauvegardés
+  delete_btn: Supprimer
+  delete_confirm: Confirmer la suppression ?
+
+breadcrumb:
+  back: Retour à la page précédente

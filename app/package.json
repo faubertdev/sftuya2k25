@@ -1,0 +1,47 @@
+{
+    "devDependencies": {
+        "@babel/core": "^7.17.0",
+        "@babel/preset-env": "^7.16.0",
+        "@hotwired/stimulus": "^3.0.0",
+        "@popperjs/core": "^2.11.6",
+        "@symfony/stimulus-bridge": "^3.2.0",
+        "@symfony/webpack-encore": "^4.2.0",
+        "bootstrap": "^5.2.2",
+        "core-js": "^3.23.0",
+        "file-loader": "^6.2.0",
+        "jquery": "^3.7.0",
+        "regenerator-runtime": "^0.13.9",
+        "sass": "^1.55.0",
+        "sass-loader": "^13.1.0",
+        "webpack": "^5.76.3",
+        "webpack-cli": "^4.10.0",
+        "webpack-notifier": "^1.15.0"
+    },
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "dev-server": "encore dev-server",
+        "dev": "encore dev",
+        "watch": "encore dev --watch",
+        "build": "encore production --progress"
+    },
+    "dependencies": {
+        "@fullcalendar/core": "^6.1.8",
+        "@fullcalendar/daygrid": "^6.1.8",
+        "@fullcalendar/web-component": "^6.1.8",
+        "apexcharts": "^3.37.2",
+        "bootstrap-datepicker": "^1.9.0",
+        "bootstrap-icons": "^1.9.1",
+        "datatables.net": "^1.13.4",
+        "datatables.net-bs5": "^1.13.4",
+        "datatables.net-buttons": "^2.3.6",
+        "datatables.net-fixedcolumns": "^4.2.2",
+        "datatables.net-fixedheader": "^3.3.2",
+        "datatables.net-plugins": "^1.13.4",
+        "datatables.net-responsive": "^2.4.1",
+        "jstree": "^3.3.15",
+        "latest-version": "^7.0.0",
+        "moment": "^2.29.4",
+        "npm": "^9.5.0"
+    }
+}

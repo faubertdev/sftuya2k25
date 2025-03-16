@@ -1,0 +1,129 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    {#    {% include "modals/_toasts.html.twig" %}#}
+
+    <div class="container">
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="col-4 alert alert-{{ label }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+    <div class="container-fluid">
+
+        <!-- start page title -->
+        {% embed "modals/breadcrumbs.html.twig" %}
+            {% set link_back = path('app_user_edit_user') %}
+            {% block page_title %}{{'home.user.edit'|trans}}{% endblock %}
+        {% endembed %}
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="tab-content">
+                            {{ form_start(form) }}
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        {{ form_label(form.username) }}
+                                        {{ form_widget(form.username) }}
+                                        {{ form_errors(form.username) }}
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        {{ form_label(form.email) }}
+                                        {{ form_widget(form.email) }}
+                                        {{ form_errors(form.email) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        {{ form_label(form.lastName) }}
+                                        {{ form_widget(form.lastName) }}
+                                        {{ form_errors(form.lastName) }}
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        {{ form_label(form.firstName) }}
+                                        {{ form_widget(form.firstName) }}
+                                        {{ form_errors(form.firstName) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        {{ form_label(form.address) }}
+                                        {{ form_widget(form.address) }}
+                                        {{ form_errors(form.address) }}
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        {{ form_label(form.address_cpl) }}
+                                        {{ form_widget(form.address_cpl) }}
+                                        {{ form_errors(form.address_cpl) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        {{ form_label(form.zip) }}
+                                        {{ form_widget(form.zip) }}
+                                        {{ form_errors(form.zip) }}
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        {{ form_label(form.town) }}
+                                        {{ form_widget(form.town) }}
+                                        {{ form_errors(form.town) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        {{ form_label(form.phone) }}
+                                        {{ form_widget(form.phone) }}
+                                        {{ form_errors(form.phone) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        {{ form_label(form.password.first) }}
+                                        {{ form_widget(form.password.first) }}
+                                        {{ form_errors(form.password.first) }}
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        {{ form_row(form.password.second) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col text-center">
+                                    {{ form_widget(form.save) }}
+                                </div>
+                            </div>
+                            {{ form_end(form) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
